@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +22,28 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import Layout from "./Layout"
+import Home from "./page/Home"
+import About from "./page/About"
+import Contact from "./page/Contact"
+import Service from "./Service"
+ export default function App() {
+     return(
+      <BrowserRouter>
+      <Routes>
+       <Route path="/" element={<Layout/>}>
+       <Route index element={<Home/>}/>
+       <Route path ="about" element={<About/>}/>
+       <Route path="contact" element={<Contact/>}/>
+       <Route path="Service" element = {<Service/>}/>
+
+  </Route>
+       </Routes>
+       </BrowserRouter>
+
+
+     )
+ }
+
