@@ -29,8 +29,10 @@ import Home from "./page/Home"
 import About from "./page/About"
 import Contact from "./page/Contact"
 import Service from "./Service"
+import Effect from "./Effect"
  export default function App() {
      return(
+      <>
       <BrowserRouter>
       <Routes>
        <Route path="/" element={<Layout/>}>
@@ -38,12 +40,11 @@ import Service from "./Service"
        <Route path ="about" element={<About/>}/>
        <Route path="contact" element={<Contact/>}/>
        <Route path="Service" element = {<Service/>}/>
-
   </Route>
        </Routes>
        </BrowserRouter>
-
-
+       <Effect/>
+</>
      )
  }
 
